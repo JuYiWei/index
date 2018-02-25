@@ -12,7 +12,7 @@
     <div class="container">
         <div class="navbar-header">
             <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">导航</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -23,129 +23,118 @@
             <ul class="nav navbar-nav">
                 <li><a href="javascript:void(0)" onclick="iOSHandler()" target="_self" >iOS</a></li>
                 <li><a href="javascript:void(0)" onclick="webHandler()" target="_self">Web</a></li>
-                <!--<li><a href="javascript:void(0)" onclick="readingHandler()" target="_self">读书</a></li>-->
-                <!--<li><a href="javascript:void(0)" onclick="occupationHandler()" target="_self">职业</a></li>-->
+                <li><a href="javascript:void(0)" onclick="serverHandler()" target="_self">Server</a></li>
                 <li><a href="javascript:void(0)" onclick="computerHandler()" target="_self">计算机</a></li>
                 <li><a href="javascript:void(0)" onclick="otherHandler()" target="_self">其他</a></li>
             </ul>
         </div>
     </div>
 </div>
-
 <div class="container projects">
     <br> <br> <br> <br>
       <div class='row' id='cz_html'>  </div>
 </div>
-
-
 <footer class="footer">
     <div class="container">
         <div class="row footer-bottom">
             <ul class="list-inline text-center">
-                <li>© 2017 说了是村长</li>
+                <li>© 2018 说了是村长，转载请写明出处，谢谢。</li>
             </ul>
         </div>
     </div>
 </footer>
 
-
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <script>
-	function addCell($url, $imgScr, $title, $date, $desc) {
+	function addCell($url, $title, $date, $desc) {
 		$("#cz_html").append('<div class="col-sm-6 col-md-4 col-lg-3">' +
-			'<div class="thumbnail" style="height: 352px;">' +
+			'<div class="thumbnail" style="height: 200px;">' +
 			'<div class="caption">' +
-			'<a href="' + $url + '" target="_blank">' +
-			'<img class="lazy" src="' + $imgScr + '"></a>' +
-			'<h3><a href="' + $url + '" target="_blank">' + $title + '<br><small>' + $date + '</small></a></h3>' +
-			'<p>' + $desc + '</p>' +
+			'<h3>' +
+            '<a href="' + $url + '" target="_blank">' + $title + '<br>' +
+            '<small style="color: darkgrey">' + $date + '</small>' +
+            '</a>' +
+            '</h3>' +
+			'<p style="padding-top: 10px">' + $desc + '</p>' +
 			'</div></div></div>');
 	}
 </script>
+
 <script>
-	var  _url = '';
-	var  _src = '';
-	var  _title = '';
-	var  _date = '';
-	var  _desc = '';
-	
 	function homeHandler() {
 		$("#cz_html").html('');
-		
-		_url = 'http://www.jianshu.com/u/0aa03a749d4e';
-		_src = 'scr/home/jianshu.png';
-		_title = '说了是村长的简书';
-		_date = '2017 年 1 月';
-		_desc = '100% 原创笔记';
-		addCell(_url, _src, _title, _date, _desc);
-        
-		_url = 'http://weibo.com/u/1892437221?refer_flag=1005055010_';
-		_src = 'scr/home/sina.png';
-		_title = '说了是村长 的 新浪微博';
-		_date = '2017 年 1 月';
-		_desc = '新浪微博，以前都不怎么用，现在用也过了风头。不管怎么样，要开始用了。';
-		addCell(_url, _src, _title, _date, _desc);
-        
-		_url = 'https://github.com/JuYiWei';
-		_src = 'scr/home/github.png';
-		_title = '说了是村长 的 Github';
-		_date = '2017 年 1 月';
-		_desc = '没啥开源项目。';
-		addCell(_url, _src, _title, _date, _desc);
-		
-		_url = 'javascript:void(0)';
-		_src = 'scr/home/weixin.png';
-		_title = '说了是村长 的 微信订阅号';
-		_date = '2017 年 1 月';
-		_desc = '公众号，平时就放点笔记和新闻。';
-		addCell(_url, _src, _title, _date, _desc);
+
+		addCell(
+		    'http://www.jianshu.com/u/0aa03a749d4e',
+            '说了是村长的简书',
+            '2017 年 1 月',
+            '100% 原创笔记');
+
+        addCell(
+            'http://weibo.com/u/1892437221?refer_flag=1005055010_',
+            '说了是村长 的 新浪微博',
+            '2018 年 1 月',
+            '新浪微博，以前都不怎么用，现在用也过了风头。不管怎么样，要开始用了。');
+
+        addCell(
+            'https://github.com/JuYiWei',
+            '说了是村长 的 Github',
+            '2017 年 1 月',
+            '没啥开源项目。');
 	}
 	
 	function iOSHandler() {
 		$("#cz_html").html('');
-		
-		_url = 'https://juyiwei.github.io/iOSDevelopMixed/';
-		_src = 'scr/ios/mixed.png';
-		_title = 'iOS 开发杂记';
-		_date = '2017 年 1 月';
-		_desc = 'iOS 开发杂记。';
-		addCell(_url, _src, _title, _date, _desc);
-		
-		_url = 'https://developer.apple.com/library/content/navigation/#section=Resource%20Types&topic=Guides';
-		_src = 'scr/ios/apple.png';
-		_title = 'Apple 官方文档';
-		_date = '2017 年 1 月';
-		_desc = 'Apple 官方文档。';
-		addCell(_url, _src, _title, _date, _desc);
-		
-		_url = 'https://juyiwei.github.io/Swift-3.0/';
-		_src = 'scr/ios/swift3.png';
-		_title = 'Swift 3 文档阅读';
-		_date = '2017 年 1 月';
-		_desc = 'Swift 3 官方文档，阅读理解。';
-		addCell(_url, _src, _title, _date, _desc);
+
 	}
 	
 	
 	function webHandler() {
 		$("#cz_html").html('');
-		
-		_url = 'https://juyiwei.github.io/JavaScript_Basic/';
-		_src = 'scr/web/javascript_jcjc_2012.png';
-		_title = 'JavaScript 基础教程';
-		_date = '2012年 第 1 版';
-		_desc = '内容以简单样例的形式呈现 JavaScript 相关知识，比较零散，整理不够全面；适合初学者；';
-		addCell(_url, _src, _title, _date, _desc);
-		
-		_url = 'https://juyiwei.github.io/TheDefinitiveGuidetoHTML5/';
-		_src = 'scr/web/html5_qwzn_2014.png';
-		_title = 'HTML5 权威指南';
-		_date = '2014年 第 1 版';
-		_desc = '内容详细，分类清晰，果然是权威指南；可做工具书，查询使用；';
-		addCell(_url, _src, _title, _date, _desc);
+
+
+        addCell(
+            'https://juyiwei.github.io/HTMLBasic',
+            'HTML 菜鸟基础',
+            '网络资源',
+            'HTML 基础；');
+
+
+        addCell(
+            'https://juyiwei.github.io/HTML5Basic',
+            'HTML 5 菜鸟基础',
+            '网络资源',
+            'HTML 5 基础；');
+
+
+        addCell(
+            'https://juyiwei.github.io/HTMLReference',
+            'HTML 参考手册',
+            '网络资源',
+            'HTML 参考手册，基础知识；');
+
+
+        addCell(
+            'https://juyiwei.github.io/JavaScriptBasic/',
+            'JavaScript 基础教程',
+            '2012年 第 1 版',
+            '内容以简单样例的形式呈现 JavaScript 相关知识，比较零散，整理不够全面；适合初学者；');
+
+
+        addCell(
+            'https://juyiwei.github.io/TheDefinitiveGuidetoHTML5/',
+            'HTML5 权威指南',
+            '2014年 第 1 版',
+            '内容详细，分类清晰，果然是权威指南；可做工具书，查询使用；');
 	}
-    
+
+	function serverHandler() {
+        $("#cz_html").html('');
+
+    }
+
 	function computerHandler() {
 		$("#cz_html").html('');
 		
