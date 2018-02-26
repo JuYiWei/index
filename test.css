@@ -1,0 +1,10 @@
+
+
+[id] {
+    color: red;
+}
+
+[id='test'] {
+    background-color: aqua;
+}
+

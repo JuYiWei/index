@@ -48,41 +48,59 @@
 <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script>
-	function addCell($url, $title, $date, $desc) {
+	function addCell($url, $title, $date, $desc, $color) {
+
 		$("#cz_html").append('<div class="col-sm-6 col-md-4 col-lg-3">' +
-			'<div class="thumbnail" style="height: 200px;">' +
+			'<div class="thumbnail" style="height: 220px;">' +
 			'<div class="caption">' +
+                '<div style="height: 40px;background-color: ' + $color + '"></div>' +
 			'<h3>' +
             '<a href="' + $url + '" target="_blank">' + $title + '<br>' +
             '<small style="color: darkgrey">' + $date + '</small>' +
             '</a>' +
             '</h3>' +
-			'<p style="padding-top: 10px">' + $desc + '</p>' +
+			'<p style="padding-top: 10px;color: #696969">' + $desc + '</p>' +
 			'</div></div></div>');
 	}
 </script>
 
 <script>
+    
+    function randomColor() {
+        var r = parseInt(Math.random()*255);
+        var g = parseInt(Math.random()*255);
+        var b = parseInt(Math.random()*255);
+        var color = 'rgb('+r + ',' + g + ',' + b + ')';
+
+        return color;
+    }
+    
 	function homeHandler() {
 		$("#cz_html").html('');
 
 		addCell(
 		    'http://www.jianshu.com/u/0aa03a749d4e',
-            '说了是村长的简书',
+            '简书',
             '2017 年 1 月',
-            '100% 原创笔记');
+            '100% 原创笔记',
+            randomColor()
+        );
 
         addCell(
             'http://weibo.com/u/1892437221?refer_flag=1005055010_',
-            '说了是村长 的 新浪微博',
+            '新浪微博',
             '2018 年 1 月',
-            '新浪微博，以前都不怎么用，现在用也过了风头。不管怎么样，要开始用了。');
+            '新浪微博，以前都不怎么用，现在用也过了风头。不管怎么样，要开始用了。',
+            randomColor()
+        );
 
         addCell(
             'https://github.com/JuYiWei',
-            '说了是村长 的 Github',
+            'Github',
             '2017 年 1 月',
-            '没啥开源项目。');
+            '没啥开源项目。',
+            randomColor()
+        );
 	}
 	
 	function iOSHandler() {
@@ -96,38 +114,58 @@
 
 
         addCell(
-            'https://juyiwei.github.io/HTMLBasic',
+            'https://juyiwei.github.io/HTML-rookie-Foundation/',
             'HTML 菜鸟基础',
             '网络资源',
-            'HTML 基础；');
+            'HTML 基础；',
+            randomColor()
+        );
 
 
         addCell(
-            'https://juyiwei.github.io/HTML5Basic',
+            'https://juyiwei.github.io/HTML5-rookie-Foundation/',
             'HTML 5 菜鸟基础',
             '网络资源',
-            'HTML 5 基础；');
+            'HTML 5 基础；',
+            randomColor()
+        );
 
 
         addCell(
-            'https://juyiwei.github.io/HTMLReference',
+            'https://juyiwei.github.io/HTML-reference-guide/',
             'HTML 参考手册',
             '网络资源',
-            'HTML 参考手册，基础知识；');
+            'HTML 参考手册，基础知识；',
+            randomColor()
+        );
+        
+        addCell(
+            'https://juyiwei.github.io/CSS-rookie-Foundation/',
+            'CSS 菜鸟基础 ',
+            '网络资源',
+            'CSS 基础；',
+            randomColor()
+        );
+
+
 
 
         addCell(
-            'https://juyiwei.github.io/JavaScriptBasic/',
+            'https://juyiwei.github.io/JavaScript-basic-tutorials/',
             'JavaScript 基础教程',
             '2012年 第 1 版',
-            '内容以简单样例的形式呈现 JavaScript 相关知识，比较零散，整理不够全面；适合初学者；');
+            '内容以简单样例的形式呈现 JavaScript 相关知识，比较零散，整理不够全面；适合初学者；',
+            randomColor()
+        );
 
 
         addCell(
-            'https://juyiwei.github.io/TheDefinitiveGuidetoHTML5/',
+            'https://juyiwei.github.io/HTML5-authoritative-guide/',
             'HTML5 权威指南',
             '2014年 第 1 版',
-            '内容详细，分类清晰，果然是权威指南；可做工具书，查询使用；');
+            '内容详细，分类清晰，果然是权威指南；可做工具书，查询使用；',
+            randomColor()
+        );
 	}
 
 	function serverHandler() {
@@ -142,6 +180,13 @@
 	
 	function otherHandler() {
 		$("#cz_html").html('');
+
+        addCell(
+            'https://juyiwei.github.io/EDP-career-planning-is-just-the-same',
+            'EDP：职业生涯规划不过如此',
+            '网易云课堂',
+            '职业规划；');
+
 		
 	}
 	
