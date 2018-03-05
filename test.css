@@ -1,10 +1,18 @@
 
 
-[id] {
-    color: red;
+
+
+
+
+
+
+input:valid {
+    background-color: greenyellow;
 }
 
-[id='test'] {
-    background-color: aqua;
+input:invalid {
+    background-color: red;
 }
+
+
 

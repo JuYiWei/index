@@ -38,7 +38,7 @@
     <div class="container">
         <div class="row footer-bottom">
             <ul class="list-inline text-center">
-                <li>© 2018 说了是村长，转载请写明出处，谢谢。</li>
+                <li style="color: gray;font-weight: 300">© 2018 说了是村长，转载请写明出处，谢谢。</li>
             </ul>
         </div>
     </div>
@@ -49,7 +49,6 @@
 
 <script>
 	function addCell($url, $title, $date, $desc, $color) {
-
 		$("#cz_html").append('<div class="col-sm-6 col-md-4 col-lg-3">' +
 			'<div class="thumbnail" style="height: 220px;">' +
 			'<div class="caption">' +
@@ -90,7 +89,7 @@
             'http://weibo.com/u/1892437221?refer_flag=1005055010_',
             '新浪微博',
             '2018 年 1 月',
-            '新浪微博，以前都不怎么用，现在用也过了风头。不管怎么样，要开始用了。',
+            '新浪微博，以前都不怎么用，现在用也过了风头。不管怎么样，要开始用了',
             randomColor()
         );
 
@@ -98,7 +97,7 @@
             'https://github.com/JuYiWei',
             'Github',
             '2017 年 1 月',
-            '没啥开源项目。',
+            '没啥开源项目',
             randomColor()
         );
 	}
@@ -117,7 +116,7 @@
             'https://juyiwei.github.io/HTML-rookie-Foundation/',
             'HTML 菜鸟基础',
             '网络资源',
-            'HTML 基础；',
+            'HTML 基础',
             randomColor()
         );
 
@@ -126,7 +125,7 @@
             'https://juyiwei.github.io/HTML5-rookie-Foundation/',
             'HTML 5 菜鸟基础',
             '网络资源',
-            'HTML 5 基础；',
+            'HTML 5 基础',
             randomColor()
         );
 
@@ -135,17 +134,37 @@
             'https://juyiwei.github.io/HTML-reference-guide/',
             'HTML 参考手册',
             '网络资源',
-            'HTML 参考手册，基础知识；',
+            'HTML 参考手册，基础知识',
             randomColor()
         );
-        
+
+
         addCell(
             'https://juyiwei.github.io/CSS-rookie-Foundation/',
-            'CSS 菜鸟基础 ',
+            'CSS 菜鸟基础',
             '网络资源',
-            'CSS 基础；',
+            'CSS 基础',
             randomColor()
         );
+
+
+        addCell(
+            'https://juyiwei.github.io/CSS3-rookie-Foundation/',
+            'CSS3 菜鸟基础',
+            '网络资源',
+            'CSS3 基础',
+            randomColor()
+        );
+
+
+        addCell(
+            'https://juyiwei.github.io/CSS-reference-manual/',
+            'CSS3 参考手册',
+            '网络资源',
+            'CSS 参考手册，基础知识',
+            randomColor()
+        );
+
 
 
 
@@ -154,7 +173,7 @@
             'https://juyiwei.github.io/JavaScript-basic-tutorials/',
             'JavaScript 基础教程',
             '2012年 第 1 版',
-            '内容以简单样例的形式呈现 JavaScript 相关知识，比较零散，整理不够全面；适合初学者；',
+            '内容以简单样例的形式呈现 JavaScript 相关知识，比较零散，整理不够全面；适合初学者',
             randomColor()
         );
 
@@ -163,7 +182,7 @@
             'https://juyiwei.github.io/HTML5-authoritative-guide/',
             'HTML5 权威指南',
             '2014年 第 1 版',
-            '内容详细，分类清晰，果然是权威指南；可做工具书，查询使用；',
+            '内容详细，分类清晰，果然是权威指南；可做工具书，查询使用',
             randomColor()
         );
 	}
@@ -185,7 +204,9 @@
             'https://juyiwei.github.io/EDP-career-planning-is-just-the-same',
             'EDP：职业生涯规划不过如此',
             '网易云课堂',
-            '职业规划；');
+            '职业规划；',
+            randomColor()
+        );
 
 		
 	}
