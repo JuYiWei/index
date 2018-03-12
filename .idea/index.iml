@@ -16,5 +16,7 @@
     </orderEntry>
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="vue.js" level="application" />
+    <orderEntry type="library" name="vue-router.js" level="project" />
   </component>
 </module>
