@@ -23,8 +23,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="javascript:void(0)" onclick="iOSHandler()" target="_self" >iOS</a></li>
                 <li><a href="javascript:void(0)" onclick="webHandler()" target="_self">Web</a></li>
-                <li><a href="javascript:void(0)" onclick="serverHandler()" target="_self">Server</a></li>
-                <li><a href="javascript:void(0)" onclick="computerHandler()" target="_self">计算机</a></li>
+                <li><a href="javascript:void(0)" onclick="wechatHandler()" target="_self">微信开发</a></li>
+                <!--<li><a href="javascript:void(0)" onclick="serverHandler()" target="_self">Server</a></li>-->
+                <!--<li><a href="javascript:void(0)" onclick="computerHandler()" target="_self">计算机</a></li>-->
                 <li><a href="javascript:void(0)" onclick="otherHandler()" target="_self">其他</a></li>
             </ul>
         </div>
@@ -64,7 +65,6 @@
 </script>
 
 <script>
-    
     function randomColor() {
         var r = parseInt(Math.random()*255);
         var g = parseInt(Math.random()*255);
@@ -81,7 +81,15 @@
 		    'http://www.jianshu.com/u/0aa03a749d4e',
             '简书',
             '2017 年 1 月',
-            '100% 原创笔记',
+            '100% 原创笔记，旧版笔记，于 2018 年开始不再更新',
+            randomColor()
+        );
+
+        addCell(
+            'https://juyiwei.github.io/Blog/',
+            '博客',
+            '2018 年 1 月',
+            '以后都直接在博客更新，放弃简书了',
             randomColor()
         );
 
@@ -89,15 +97,15 @@
             'http://weibo.com/u/1892437221?refer_flag=1005055010_',
             '新浪微博',
             '2018 年 1 月',
-            '新浪微博，以前都不怎么用，现在用也过了风头。不管怎么样，要开始用了',
+            '新浪微博，以前都不怎么用',
             randomColor()
         );
 
         addCell(
             'https://github.com/JuYiWei',
             'Github',
-            '2017 年 1 月',
-            '没啥开源项目',
+            '2018 年 1 月',
+            '并没啥开源项目',
             randomColor()
         );
 	}
@@ -105,12 +113,27 @@
 	function iOSHandler() {
 		$("#cz_html").html('');
 
+        addCell(
+            'https://juyiwei.github.io/iOS-UIKit/',
+            'iOS - UIKit',
+            '系统 API',
+            'UIKit 基础',
+            randomColor()
+        );
+
+        addCell(
+            'https://juyiwei.github.io/iOS-Foundation/',
+            'iOS - Foundation',
+            '系统 API',
+            'Foundation 基础',
+            randomColor()
+        );
+
+
 	}
-	
-	
+
 	function webHandler() {
 		$("#cz_html").html('');
-
 
         addCell(
             'https://juyiwei.github.io/HTML-rookie-Foundation/',
@@ -120,7 +143,6 @@
             randomColor()
         );
 
-
         addCell(
             'https://juyiwei.github.io/HTML5-rookie-Foundation/',
             'HTML 5 菜鸟基础',
@@ -128,7 +150,6 @@
             'HTML 5 基础',
             randomColor()
         );
-
 
         addCell(
             'https://juyiwei.github.io/HTML-reference-guide/',
@@ -146,7 +167,6 @@
             randomColor()
         );
 
-
         addCell(
             'https://juyiwei.github.io/CSS-rookie-Foundation/',
             'CSS 菜鸟基础',
@@ -155,7 +175,6 @@
             randomColor()
         );
 
-
         addCell(
             'https://juyiwei.github.io/CSS3-rookie-Foundation/',
             'CSS3 菜鸟基础',
@@ -163,7 +182,6 @@
             'CSS3 基础',
             randomColor()
         );
-
 
         addCell(
             'https://juyiwei.github.io/CSS-reference-manual/',
@@ -205,10 +223,19 @@
             randomColor()
         );
 
+    }
 
+    function wechatHandler() {
+        $("#cz_html").html('');
 
-
-	}
+        addCell(
+            'https://juyiwei.github.io/Base-of-small-program/',
+            '微信小程序开发基础',
+            '网络资源',
+            '微信小程序开发基础，官方文档基础知识',
+            randomColor()
+        );
+    }
 
 	function serverHandler() {
         $("#cz_html").html('');
@@ -221,22 +248,24 @@
 	}
 	
 	function otherHandler() {
-		$("#cz_html").html('');
+        $("#cz_html").html('');
 
         addCell(
-            'https://juyiwei.github.io/EDP-career-planning-is-just-the-same',
+            'https://juyiwei.github.io/EDP-career-planning-is-just-the-same/',
             'EDP：职业生涯规划不过如此',
             '网易云课堂',
             '职业规划；',
             randomColor()
         );
 
-		
-	}
-	
+    }
+
+
+
 	$(function () {
         homeHandler();
 	})
+
 </script>
 
 </body>

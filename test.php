@@ -5,3 +5,11 @@
  * Date: 2018/3/12
  * Time: 16:08
  */
+
+
+
+namespace MyProject;
+
+
+
+echo '123';
